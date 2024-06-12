@@ -1,5 +1,17 @@
+import { ThemeProvider } from "styled-components";
+
+import Header from "./components/Header";
+
+import theme from "./styles";
+import GlobalStyle from "./styles/global";
+
 function App() {
-  return <h1>Carol</h1>;
+  return (
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
+      <Header />
+    </ThemeProvider>
+  );
 }
 
 export default App;
