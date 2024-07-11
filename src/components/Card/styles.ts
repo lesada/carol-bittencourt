@@ -31,6 +31,7 @@ export const Wrapper = styled.div`
 export const Tags = styled.ul`
   display: flex;
   flex-wrap: wrap;
+  margin-top: 0.25rem;
 `;
 
 export const Tag = styled.li`
@@ -41,6 +42,7 @@ export const Tag = styled.li`
   letter-spacing: 0.01875rem;
   margin-right: 0.5rem;
   list-style-position: inside;
+  line-height: 1rem;
 
   &:first-child {
     list-style: none;

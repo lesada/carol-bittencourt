@@ -12,7 +12,7 @@ function Card() {
         <img src={mock} alt="" />
       </Picture>
       <Wrapper>
-        <Heading variant="h4" color={theme.colors.neutral[900]}>
+        <Heading variant="h6" color={theme.colors.neutral[900]}>
           Sociedade Brasileira de Computação
         </Heading>
         <Tags>
