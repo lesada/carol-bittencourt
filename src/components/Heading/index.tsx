@@ -6,11 +6,12 @@ type HeadingProps = {
   variant: VariantHeading;
   children: React.ReactNode;
   color?: string;
+  align?: string;
 };
 
-function Heading({ variant, children, color }: HeadingProps) {
+function Heading({ variant, children, color, align }: HeadingProps) {
   return (
-    <Title as={variant} $variant={variant} $color={color}>
+    <Title as={variant} $variant={variant} $color={color} $align={align}>
       {children}
     </Title>
   );

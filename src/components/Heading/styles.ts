@@ -2,7 +2,11 @@ import styled from "styled-components";
 
 import { VariantHeading } from ".";
 
-export const Title = styled.h1<{ $variant: VariantHeading; $color?: string }>`
+export const Title = styled.h1<{
+  $variant: VariantHeading;
+  $color?: string;
+  $align?: string;
+}>`
   font-size: ${({ $variant }) => {
     switch ($variant) {
       case "h1":
@@ -38,6 +42,8 @@ export const Title = styled.h1<{ $variant: VariantHeading; $color?: string }>`
   }};
 
   color: ${({ $color, theme }) => $color ?? theme.colors.neutral[0]};
+
+  text-align: ${({ $align }) => $align ?? "left"};
 
   font-weight: 600;
 
