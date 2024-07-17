@@ -6,7 +6,7 @@ export const Testimonial = styled.div`
   align-items: center;
   gap: 1.5rem;
   padding-bottom: 3rem;
-  width: 100%;
+  width: calc(100% - 2rem);
 `;
 
 export const Text = styled.p`
