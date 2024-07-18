@@ -1,6 +1,7 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import { Icons } from "@/assets/icons";
+import useIsMobile from "@/hooks/useIsMobile";
 
 import { Container, Items, Menu, MenuItem, Padding } from "./styles";
 
@@ -62,19 +63,7 @@ function MenuDesktop() {
 }
 
 function Header() {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-
-    handleResize();
-
-    window.addEventListener("resize", handleResize);
-
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  const isMobile = useIsMobile();
 
   return (
     <>

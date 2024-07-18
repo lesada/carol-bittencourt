@@ -48,6 +48,10 @@ const style = css`
     box-shadow: 0 0 0 2px ${({ theme }) => theme.colors.brand[100]};
     border-radius: 0.375rem;
   }
+
+  p {
+    width: 100%;
+  }
 `;
 
 const GlobalStyle = createGlobalStyle`${style}`;

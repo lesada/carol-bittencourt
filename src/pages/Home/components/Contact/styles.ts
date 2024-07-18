@@ -6,7 +6,12 @@ export const Form = styled.form`
   gap: 1rem;
 
   max-width: 13rem;
+  width: 100%;
   margin: 0 auto;
+
+  @media screen and (min-width: 768px) {
+    max-width: 30rem;
+  }
 
   label {
     font-size: 0.75rem;

@@ -47,6 +47,8 @@ export const Title = styled.h1<{
 
   font-weight: 600;
 
+  /* width: 100%; */
+
   @media screen and (max-width: 768px) {
     font-size: ${({ $variant }) => {
       switch ($variant) {

@@ -1,6 +1,7 @@
 import { Icons } from "@/assets/icons";
 import Card from "@/components/Card";
 import Heading from "@/components/Heading";
+import useIsMobile from "@/hooks/useIsMobile";
 
 import About from "./components/About";
 import Contact from "./components/Contact";
@@ -9,6 +10,8 @@ import Testimonials from "./components/Testimonials";
 import { Container, Row, Section } from "./styles";
 
 function Home() {
+  const isMobile = useIsMobile();
+
   return (
     <Container>
       <Section id="projects">
@@ -17,7 +20,7 @@ function Home() {
       </Section>
       <About />
       <Section>
-        <Heading variant="h2" align="center">
+        <Heading variant="h2" align={isMobile ? "center" : "left"}>
           Onde você pode ter visto meu trabalho
         </Heading>
         <Row>

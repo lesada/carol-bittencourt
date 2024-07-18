@@ -6,7 +6,7 @@ type HeadingProps = {
   variant: VariantHeading;
   children: React.ReactNode;
   color?: string;
-  align?: string;
+  align?: "left" | "center" | "right";
 };
 
 function Heading({ variant, children, color, align }: HeadingProps) {

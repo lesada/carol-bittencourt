@@ -4,6 +4,7 @@ export const Pictures = styled.div`
   display: flex;
 
   position: relative;
+  margin: 0 auto;
 `;
 
 export const Picture = styled.div`
@@ -32,6 +33,11 @@ export const Picture = styled.div`
   &:last-child {
     z-index: 1;
     transform: rotate(-3.674deg);
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 13.375rem;
+    height: 17.461rem;
   }
 `;
 
