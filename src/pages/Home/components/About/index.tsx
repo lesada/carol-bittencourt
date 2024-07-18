@@ -8,7 +8,7 @@ import { Picture, Pictures, Text } from "./styles";
 
 function About() {
   return (
-    <Section>
+    <Section id="about">
       <Heading variant="h1">Sobre mim</Heading>
       <Pictures>
         <Picture>

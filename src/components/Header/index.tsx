@@ -1,10 +1,10 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { Icons } from "@/assets/icons";
 
-import { Container, Menu, MenuItem } from "./styles";
+import { Container, Items, Menu, MenuItem, Padding } from "./styles";
 
-function Header() {
+function MenuMobile() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
@@ -37,6 +37,49 @@ function Header() {
           </ul>
         </Menu>
       )}
+    </>
+  );
+}
+
+function MenuDesktop() {
+  return (
+    <Container>
+      <Icons.Logo />
+      <Items>
+        <MenuItem>
+          <a href="#projects">Projetos</a>
+        </MenuItem>
+        <MenuItem>
+          <a href="#about">Sobre mim</a>
+        </MenuItem>
+        <MenuItem>
+          <a href="#contact">Contato</a>
+        </MenuItem>
+      </Items>
+      <Icons.BrazilFlag />
+    </Container>
+  );
+}
+
+function Header() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  return (
+    <>
+      {isMobile ? <MenuMobile /> : <MenuDesktop />}
+      <Padding />
     </>
   );
 }

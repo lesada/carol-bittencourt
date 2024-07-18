@@ -11,7 +11,7 @@ import { Container, Row, Section } from "./styles";
 function Home() {
   return (
     <Container>
-      <Section>
+      <Section id="projects">
         <Heading variant="h1">Projetos</Heading>
         <Card />
       </Section>

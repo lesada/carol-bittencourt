@@ -6,7 +6,13 @@ export const Container = styled.header`
   align-items: center;
 
   padding: 2rem;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: ${({ theme }) => theme.colors.brand[900]};
+  z-index: 9;
+  border-bottom: 1px solid ${({ theme }) => theme.colors.neutral[900]};
 `;
 
 const listMenu = css`
@@ -41,10 +47,22 @@ export const MenuItem = styled.li`
   list-style: none;
   font-size: 0.875rem;
 
+  @media screen and (min-width: 768px) {
+    font-size: 1rem;
+  }
+
   a {
     text-decoration: none;
     font-weight: 400;
     line-height: 1.25rem;
     color: ${({ theme }) => theme.colors.neutral[200]};
   }
+`;
+
+export const Items = styled.ul`
+  display: flex;
+`;
+
+export const Padding = styled.div`
+  height: 5.5rem;
 `;
