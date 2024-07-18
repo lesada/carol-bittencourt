@@ -12,6 +12,7 @@ export const Section = styled.section`
   flex-direction: column;
   gap: 2rem;
   padding: 2rem 0;
+  max-width: 100%;
 `;
 
 export const Row = styled.div`
