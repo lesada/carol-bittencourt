@@ -21,7 +21,7 @@ function Footer() {
         <ExternalLink>
           <Icons.Whatsapp />
           <a href="https://www.linkedin.com/in/carolbitt/">
-            ExternalLinkedin/carolbitt
+            Linkedin/carolbitt
           </a>
         </ExternalLink>
       </Col>
