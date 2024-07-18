@@ -28,6 +28,10 @@ export const Form = styled.form`
     border: 1px solid ${({ theme }) => theme.colors.neutral[200]};
     background-color: transparent;
     color: ${({ theme }) => theme.colors.neutral[200]};
+
+    @media screen and (min-width: 768px) {
+      height: 2rem;
+    }
   }
 
   textarea {

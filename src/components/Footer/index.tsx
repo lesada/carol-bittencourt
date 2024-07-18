@@ -12,7 +12,9 @@ function Footer() {
         <p>Entre em contato</p>
         <ExternalLink>
           <Icons.Whatsapp />
-          <a href="wa.me/5584999046625">+55 84 99904-6625</a>
+          <a href="https://api.whatsapp.com/send/?phone=5584999046625">
+            +55 84 99904-6625
+          </a>
         </ExternalLink>
         <ExternalLink>
           <Icons.Whatsapp />
