@@ -31,3 +31,9 @@ export const Row = styled.div`
     gap: 2.5rem;
   }
 `;
+
+export const Video = styled.video`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+`;

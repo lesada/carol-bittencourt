@@ -5,6 +5,23 @@ export const Pictures = styled.div`
 
   position: relative;
   margin: 0 auto;
+
+  @media screen and (min-width: 768px) {
+    &:hover {
+      div:first-child {
+        transform: rotate(-8.234deg) translateX(-0.5rem);
+        background-color: red;
+      }
+
+      div:nth-child(2) {
+        transform: rotate(5.334deg);
+      }
+
+      div:last-child {
+        transform: rotate(-8.24deg) translateX(0.5rem);
+      }
+    }
+  }
 `;
 
 export const Picture = styled.div`
@@ -38,6 +55,8 @@ export const Picture = styled.div`
   @media screen and (min-width: 768px) {
     width: 13.375rem;
     height: 17.461rem;
+
+    transition: transform 0.3s ease;
   }
 `;
 
