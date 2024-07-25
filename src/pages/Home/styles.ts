@@ -36,6 +36,7 @@ export const Video = styled.video`
   width: 100%;
   height: 8.625rem;
   object-fit: cover;
+  object-position: right bottom;
 
   @media screen and (min-width: 768px) {
     height: 20.75rem;
