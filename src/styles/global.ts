@@ -12,6 +12,11 @@ const style = css`
     color: ${({ theme }) => theme.colors.neutral[900]};
   }
 
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: ${({ theme }) => theme.metrics.headerHeight};
+  }
+
   body {
     font-family: "Archivo", sans-serif;
     font-optical-sizing: auto;

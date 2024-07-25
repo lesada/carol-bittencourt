@@ -1,11 +1,14 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const Container = styled(Link)`
   display: flex;
   flex-direction: column;
   border-radius: 0.5rem;
   background-color: ${({ theme }) => theme.colors.neutral[200]};
   max-width: 20rem;
+
+  text-decoration: none;
 `;
 
 export const Picture = styled.div`

@@ -1,24 +1,32 @@
 import mock from "@/assets/images/mock-card.png";
+import { PATHS } from "@/routes";
 import theme from "@/styles";
 
 import Heading from "../Heading";
 
 import { Container, Picture, Tag, Tags, Wrapper } from "./styles";
 
-function Card() {
+export type CardProps = {
+  title: string;
+  tags: string[];
+  id: string;
+  image?: string;
+};
+
+function Card({ title, tags, image, id }: CardProps) {
   return (
-    <Container>
+    <Container to={PATHS.ARTICLE.replace(":id", id)}>
       <Picture>
-        <img src={mock} alt="" />
+        <img src={image ?? mock} alt="" />
       </Picture>
       <Wrapper>
         <Heading variant="h6" color={theme.colors.neutral[900]}>
-          Sociedade Brasileira de Computação
+          {title}
         </Heading>
         <Tags>
-          <Tag>UX/UX Design</Tag>
-          <Tag>Redesign</Tag>
-          <Tag>Website</Tag>
+          {tags.map((tag) => (
+            <Tag key={tag}>{tag}</Tag>
+          ))}
         </Tags>
       </Wrapper>
     </Container>

@@ -24,7 +24,7 @@ function Contact() {
   }
 
   return (
-    <Section>
+    <Section id="contact">
       <Heading variant="h2" align="center">
         Entre em contato comigo
       </Heading>

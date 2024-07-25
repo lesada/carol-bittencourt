@@ -9,9 +9,11 @@ export const Container = styled.header`
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  background-color: ${({ theme }) => theme.colors.brand[900]};
   z-index: 9;
+
+  width: 100%;
+  height: ${({ theme }) => theme.metrics.headerHeight};
+  background-color: ${({ theme }) => theme.colors.brand[900]};
   border-bottom: 1px solid ${({ theme }) => theme.colors.neutral[900]};
 `;
 
