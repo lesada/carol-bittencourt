@@ -14,8 +14,12 @@ export const Banner = styled.div`
 
 export const Grid = styled.div`
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(20.375rem, 1fr));
   gap: 1.5rem;
+
+  div {
+    justify-self: center;
+  }
 `;
 
 export const Image = styled.div<{ $full?: boolean }>`
@@ -24,6 +28,7 @@ export const Image = styled.div<{ $full?: boolean }>`
   height: 21rem;
   border-radius: 0.5rem;
   overflow: hidden;
+  margin: 0 auto;
 
   max-width: ${({ $full }) => ($full ? "100%" : "33.875rem;")};
 
