@@ -27,13 +27,13 @@ function MenuMobile() {
           </button>
           <ul>
             <MenuItem>
-              <a href="#projects">Projetos</a>
+              <a href="/#projects">Projetos</a>
             </MenuItem>
             <MenuItem>
-              <a href="#about">Sobre mim</a>
+              <a href="/#about">Sobre mim</a>
             </MenuItem>
             <MenuItem>
-              <a href="#contact">Contato</a>
+              <a href="/#contact">Contato</a>
             </MenuItem>
           </ul>
         </Menu>
@@ -48,13 +48,13 @@ function MenuDesktop() {
       <Icons.Logo />
       <Items>
         <MenuItem>
-          <a href="#projects">Projetos</a>
+          <a href="/#projects">Projetos</a>
         </MenuItem>
         <MenuItem>
-          <a href="#about">Sobre mim</a>
+          <a href="/#about">Sobre mim</a>
         </MenuItem>
         <MenuItem>
-          <a href="#contact">Contato</a>
+          <a href="/#contact">Contato</a>
         </MenuItem>
       </Items>
       <Icons.BrazilFlag />

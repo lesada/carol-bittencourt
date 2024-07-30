@@ -37,7 +37,7 @@ export const Title = styled.h1<{
       case "h5":
         return "1.5rem";
       case "h6":
-        return "1.25rem";
+        return "1.75rem";
     }
   }};
 

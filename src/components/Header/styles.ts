@@ -66,5 +66,5 @@ export const Items = styled.ul`
 `;
 
 export const Padding = styled.div`
-  height: 5.5rem;
+  height: ${({ theme }) => theme.metrics.headerHeight};
 `;
