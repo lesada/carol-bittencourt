@@ -17,6 +17,14 @@ const style = css`
     scroll-padding-top: ${({ theme }) => theme.metrics.headerHeight};
   }
 
+  html,
+  body,
+  #root {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
   body {
     font-family: "Archivo", sans-serif;
     font-optical-sizing: auto;

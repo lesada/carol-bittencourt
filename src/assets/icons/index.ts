@@ -4,6 +4,7 @@ import Impulso from "./impulso.svg?react";
 import Linkedin from "./linkedin.svg?react";
 import Logo from "./logo.svg?react";
 import Mail from "./mail.svg?react";
+import NotFound from "./not-found.svg?react";
 import Sbc from "./sbc.svg?react";
 import Sicredi from "./sicredi.svg?react";
 import Starta from "./starta.svg?react";
@@ -22,4 +23,5 @@ export const Icons = {
   Linkedin,
   Whatsapp,
   Mail,
+  NotFound,
 };
