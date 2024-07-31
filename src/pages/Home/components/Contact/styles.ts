@@ -5,7 +5,7 @@ export const Form = styled.form`
   flex-direction: column;
   gap: 1rem;
 
-  max-width: 13rem;
+  max-width: 18rem;
   width: 100%;
   margin: 0 auto;
 
