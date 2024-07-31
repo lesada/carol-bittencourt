@@ -14,7 +14,9 @@ const style = css`
 
   html {
     scroll-behavior: smooth;
-    scroll-padding-top: ${({ theme }) => theme.metrics.headerHeight};
+    scroll-padding-top: calc(
+      ${({ theme }) => theme.metrics.headerHeight} + 0.5rem
+    );
   }
 
   html,
