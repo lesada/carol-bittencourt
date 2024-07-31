@@ -27,6 +27,7 @@ export const Picture = styled.div`
   height: 3.4375rem;
   border-radius: 50%;
   overflow: hidden;
+  flex-shrink: 0;
 
   img {
     width: 100%;
