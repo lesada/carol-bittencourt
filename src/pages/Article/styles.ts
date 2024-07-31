@@ -31,6 +31,7 @@ export const Image = styled.div<{ $full?: boolean }>`
   margin: 0 auto;
 
   max-width: ${({ $full }) => ($full ? "100%" : "33.875rem;")};
+  margin-bottom: 3rem;
 
   img {
     width: 100%;

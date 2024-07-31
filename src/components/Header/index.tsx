@@ -1,7 +1,10 @@
 import { useState } from "react";
 
+import { useNavigate } from "react-router-dom";
+
 import { Icons } from "@/assets/icons";
 import useIsMobile from "@/hooks/useIsMobile";
+import { PATHS } from "@/routes";
 
 import { Container, Items, Menu, MenuItem, Padding } from "./styles";
 
@@ -43,9 +46,12 @@ function MenuMobile() {
 }
 
 function MenuDesktop() {
+  const navigate = useNavigate();
   return (
     <Container>
-      <Icons.Logo />
+      <button aria-label="Home" onClick={() => navigate(PATHS.HOME)}>
+        <Icons.Logo />
+      </button>
       <Items>
         <MenuItem>
           <a href="/#projects">Projetos</a>
