@@ -11,7 +11,7 @@ import Contact from "./components/Contact";
 import Testimonials from "./components/Testimonials";
 import { cards } from "./constants";
 
-import { Row, Section, Video } from "./styles";
+import { Grid, Row, Section, Video } from "./styles";
 
 function Home() {
   const isMobile = useIsMobile();
@@ -25,9 +25,11 @@ function Home() {
       <Layout>
         <Section id="projects">
           <Heading variant={isMobile ? "large" : "xx-large"}>Projetos</Heading>
-          {cards.map((card) => (
-            <Card key={card.title} {...card} />
-          ))}
+          <Grid>
+            {cards.map((card) => (
+              <Card key={card.title} {...card} />
+            ))}
+          </Grid>
         </Section>
         <About />
         <Section>

@@ -32,3 +32,14 @@ export const Video = styled.video`
     height: 20.75rem;
   }
 `;
+
+export const Grid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20.375rem, 1fr));
+  justify-items: center;
+  gap: 1rem;
+
+  div {
+    justify-self: center;
+  }
+`;
