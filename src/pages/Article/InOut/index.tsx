@@ -1,5 +1,6 @@
 import Heading from "@/components/Heading";
 import Layout from "@/components/Layout";
+import useIsMobile from "@/hooks/useIsMobile";
 
 import BannerImage from "./assets/banner.png";
 import Grid1 from "./assets/grid-1.png";
@@ -13,6 +14,8 @@ import Wireframes from "./assets/wireframes.png";
 import { Banner, Grid, Image, Text } from "../styles";
 
 function InOut() {
+  const isMobile = useIsMobile();
+
   return (
     <>
       <Banner>
@@ -20,10 +23,10 @@ function InOut() {
       </Banner>
 
       <Layout align="left" gap="medium">
-        <Heading variant="h1" align="center">
+        <Heading variant={isMobile ? "medium" : "x-large"} align="center">
           InOut - Time Tracker
         </Heading>
-        <Heading variant="h6">
+        <Heading as="h2" variant={"x-small"}>
           A ideia de um aplicativo para registrar as horas trabalhadas surgiu da
           necessidade de uma cliente de ter um controle de jornada eficiente
           para apresentar ao tomador de serviço.
@@ -42,7 +45,9 @@ function InOut() {
             <img src={Grid4} alt="" />
           </Image>
         </Grid>
-        <Heading variant="h5">InOut - Time Tracker</Heading>
+        <Heading variant={isMobile ? "x-small" : "small"}>
+          InOut - Time Tracker
+        </Heading>
         <Text>
           A necessidade de pessoas autônomas em registrar sua jornada de
           trabalho não é de hoje. Mesmo sem a obrigatoriedade de um controle de
@@ -52,14 +57,18 @@ function InOut() {
           iniciamos o projeto com a criação da identidade visual e logotipo do
           aplicativo.
         </Text>
-        <Heading variant="h5">UI Benchmarking</Heading>
+        <Heading variant="small" as="h3">
+          UI Benchmarking
+        </Heading>
         <Text>
           Concluída a fase inicial, pude realizar o benchmarking de UI e
           entender melhor os produtos já existentes no mercado. Conversei com a
           cliente para poder priorizar as funcionalidades que ela realmente iria
           utilizar e comecei o desenho da interface através de wireframes.
         </Text>
-        <Heading variant="h5">Wireframes</Heading>
+        <Heading variant="small" as="h3">
+          Wireframes
+        </Heading>
         <Text>
           Nessa etapa pude rascunhar as telas iniciais do produto para poder
           entender onde cada etapa da jornada ficaria melhor para o usuário
@@ -68,11 +77,15 @@ function InOut() {
         <Image>
           <img src={Wireframes} alt="" />
         </Image>
-        <Heading variant="h5">Criando o protótipo</Heading>
+        <Heading variant="small" as="h3">
+          Criando o protótipo
+        </Heading>
         <Image $full>
           <img src={Prototype} alt="" />
         </Image>
-        <Heading variant="h6">Alta Fidelidade</Heading>
+        <Heading variant="x-small" as="h4">
+          Alta Fidelidade
+        </Heading>
         <Text>
           Para dar início a Alta Fidelidade comecei a criação do Design System,
           usando as cores da marca como cores principais e a fonte Gotham para
@@ -87,7 +100,13 @@ function InOut() {
           no projeto.
         </Text>
         <Text>
-          Acesse o <a href="/">protótipo</a>
+          Acesse o{" "}
+          <a
+            href="https://www.figma.com/proto/PXCZCi1UoP4Ga0s7BlZjZa/InOut?page-id=118%3A1737&node-id=294-2692&viewport=328%2C553%2C0.19&t=aY3o7DMCa0wf5uqm-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=294%3A2692&show-proto-sidebar=1&fuid=897959988943437709"
+            referrerPolicy="no-referrer"
+          >
+            protótipo
+          </a>
         </Text>
         <Image>
           <img src={HighFidelity} alt="" />

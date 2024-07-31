@@ -1,42 +1,42 @@
 import styled from "styled-components";
 
-import { VariantHeading } from ".";
+import { TVariant } from ".";
 
 export const Title = styled.h1<{
-  $variant: VariantHeading;
+  $variant: TVariant;
   $color?: string;
   $align?: string;
 }>`
   font-size: ${({ $variant }) => {
     switch ($variant) {
-      case "h1":
+      case "xx-large":
         return "3.5rem";
-      case "h2":
+      case "x-large":
         return "3rem";
-      case "h3":
+      case "large":
         return "2.5rem";
-      case "h4":
+      case "medium":
         return "2rem";
-      case "h5":
+      case "small":
         return "1.5rem";
-      case "h6":
+      case "x-small":
         return "1.25rem";
     }
   }};
 
   line-height: ${({ $variant }) => {
     switch ($variant) {
-      case "h1":
+      case "xx-large":
         return "4rem";
-      case "h2":
+      case "x-large":
         return "3.5rem";
-      case "h3":
+      case "large":
+        return "3rem";
+      case "medium":
         return "2.5rem";
-      case "h4":
+      case "small":
         return "2rem";
-      case "h5":
-        return "1.5rem";
-      case "h6":
+      case "x-small":
         return "1.75rem";
     }
   }};
@@ -46,26 +46,4 @@ export const Title = styled.h1<{
   text-align: ${({ $align }) => $align ?? "left"};
 
   font-weight: 600;
-
-  /* width: 100%; */
-
-  @media screen and (max-width: 768px) {
-    font-size: ${({ $variant }) => {
-      switch ($variant) {
-        case "h1":
-          return "2.5rem";
-        case "h2":
-          return "2rem";
-      }
-    }};
-
-    line-height: ${({ $variant }) => {
-      switch ($variant) {
-        case "h1":
-          return "3.5rem";
-        case "h2":
-          return "2.5rem";
-      }
-    }};
-  }
 `;

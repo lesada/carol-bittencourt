@@ -11,7 +11,7 @@ function NotFound() {
   return (
     <Layout align="center" justify="center" gap="large">
       <Icons.NotFound />
-      <Heading variant="h6" align="center">
+      <Heading variant="x-small" align="center">
         Estamos tentando resolver esse problema! Tente novamente mais tarde.
       </Heading>
       <Button onClick={() => navigate(PATHS.HOME)}>Voltar ao início</Button>

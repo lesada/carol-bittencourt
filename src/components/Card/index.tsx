@@ -20,7 +20,7 @@ function Card({ title, tags, image, id }: CardProps) {
         <img src={image ?? mock} alt="" />
       </Picture>
       <Wrapper>
-        <Heading variant="h6" color={theme.colors.neutral[900]}>
+        <Heading variant="x-small" as="h6" color={theme.colors.neutral[900]}>
           {title}
         </Heading>
         <Tags>

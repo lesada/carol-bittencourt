@@ -1,6 +1,7 @@
 import { FormEvent } from "react";
 
 import Heading from "@/components/Heading";
+import useIsMobile from "@/hooks/useIsMobile";
 
 import { Section } from "../../styles";
 import { Form } from "./styles";
@@ -22,10 +23,11 @@ function Contact() {
       `https://api.whatsapp.com/send/?phone=5584999046625&text=${messageData}`
     );
   }
+  const isMobile = useIsMobile();
 
   return (
     <Section id="contact">
-      <Heading variant="h2" align="center">
+      <Heading variant={isMobile ? "medium" : "x-large"} align="center">
         Entre em contato comigo
       </Heading>
 

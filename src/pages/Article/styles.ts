@@ -22,25 +22,50 @@ export const Grid = styled.div`
   }
 `;
 
-export const Image = styled.div<{ $full?: boolean }>`
+export const Legend = styled.figcaption`
+  line-height: 1rem;
+  font-size: 0.75rem;
+  text-align: center;
+  margin: 0 auto;
+`;
+
+export const Image = styled.figure<{
+  $full?: boolean;
+  $object?: "cover" | "contain";
+}>`
   width: 100%;
 
-  height: 21rem;
+  min-height: 21rem;
   border-radius: 0.5rem;
   overflow: hidden;
   margin: 0 auto;
 
   max-width: ${({ $full }) => ($full ? "100%" : "33.875rem;")};
-  margin-bottom: 3rem;
+  padding-bottom: 3rem;
 
   img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: ${({ $object = "cover" }) => $object};
   }
 `;
 
-export const Text = styled.p`
+export const Text = styled.p<{ $bold?: boolean }>`
   text-align: justify;
   line-height: 1.5rem;
+  font-weight: ${({ $bold }) => ($bold ? "700" : "400")};
+`;
+
+export const Detach = styled.p`
+  font-size: 1.125rem;
+  line-height: 2rem;
+  font-style: italic;
+  max-width: 38rem;
+  margin: 0 auto;
+`;
+
+export const List = styled.ul`
+  li {
+    margin-left: 2rem;
+  }
 `;

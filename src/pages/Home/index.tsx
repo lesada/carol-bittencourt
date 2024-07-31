@@ -24,14 +24,18 @@ function Home() {
 
       <Layout>
         <Section id="projects">
-          <Heading variant="h1">Projetos</Heading>
+          <Heading variant={isMobile ? "large" : "xx-large"}>Projetos</Heading>
           {cards.map((card) => (
             <Card key={card.title} {...card} />
           ))}
         </Section>
         <About />
         <Section>
-          <Heading variant="h2" align={isMobile ? "center" : "left"}>
+          <Heading
+            as="h3"
+            variant={isMobile ? "medium" : "x-large"}
+            align={isMobile ? "center" : "left"}
+          >
             Onde você pode ter visto meu trabalho
           </Heading>
           <Row>
