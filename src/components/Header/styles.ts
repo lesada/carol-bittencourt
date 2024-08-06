@@ -66,5 +66,5 @@ export const Items = styled.ul`
 `;
 
 export const Padding = styled.div`
-  height: ${({ theme }) => theme.metrics.headerHeight};
+  min-height: ${({ theme }) => theme.metrics.headerHeight};
 `;
