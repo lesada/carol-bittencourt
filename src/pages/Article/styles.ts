@@ -51,7 +51,7 @@ export const Image = styled.figure<{
 `;
 
 export const Text = styled.p<{ $bold?: boolean }>`
-  text-align: justify;
+  text-align: start;
   line-height: 1.5rem;
   font-weight: ${({ $bold }) => ($bold ? "700" : "400")};
 `;

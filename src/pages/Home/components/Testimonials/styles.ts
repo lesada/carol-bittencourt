@@ -14,12 +14,14 @@ export const Text = styled.p`
   font-size: 1.25rem;
   font-weight: 700;
   line-height: 1.75rem;
+  user-select: none;
 `;
 
 export const Author = styled.div`
   display: flex;
   align-items: center;
   gap: 1rem;
+  user-select: none;
 `;
 
 export const Picture = styled.div`
