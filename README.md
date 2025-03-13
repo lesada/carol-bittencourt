@@ -1,30 +1,30 @@
-# React + TypeScript + Vite
+### Carol Bitt
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Site Screenshort](image.png)
 
-Currently, two official plugins are available:
+## 🧪 Technologies
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [TypeScript](https://www.typescriptlang.org/)
+- [React](https://react.dev/)
+- [Vite](https://vitejs.dev/)
+- [TanStack Query](https://tanstack.com/query/latest)
 
-## Expanding the ESLint configuration
+## 🚀 Getting started
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Requisites
 
-- Configure the top-level `parserOptions` property like this:
+- [NodeJS](https://nodejs.org/en)
+- [Git](https://git-scm.com/)
+- [Pnpm](https://pnpm.io/pt/) _(optional)_
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+### Clone the application
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+`$ git clone https://github.com/lesada/carol-bittencourt.git`
+
+### Running the project
+
+- Enter each folder, use `npm i` or `pnpm i` to install all dependencies.
+- Run the aplication in dev mode using te command `npm run dev` or `pnpm run dev`
+
+###Server
+We used a firebase application, you can start your own creating the same tables and using a private api key
