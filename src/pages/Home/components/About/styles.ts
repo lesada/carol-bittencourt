@@ -60,9 +60,11 @@ export const Picture = styled.div`
   }
 `;
 
-export const Text = styled.p`
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5rem;
-  color: ${({ theme }) => theme.colors.neutral[200]};
+export const TextWrapper = styled.div`
+  p {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    color: ${({ theme }) => theme.colors.neutral[200]};
+  }
 `;
