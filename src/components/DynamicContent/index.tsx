@@ -5,7 +5,7 @@ import parse, {
   HTMLReactParserOptions,
 } from "html-react-parser";
 import Heading from "../Heading";
-import { Container, Detach, Image, Legend, List, Text } from "./styles";
+import { Anchor, Container, Detach, Image, Legend, List, Text } from "./styles";
 
 type DynamicContentProps = {
   content: string | null | undefined;
@@ -66,9 +66,9 @@ function DynamicContent({ content }: DynamicContentProps) {
             return <Image>{parsedChildren}</Image>;
           case "a":
             return (
-              <a href={attribs.href} target="_blank" rel="noopener noreferrer">
+              <Anchor href={attribs.href} rel="noopener noreferrer">
                 {parsedChildren}
-              </a>
+              </Anchor>
             );
           case "div":
             return <div>{parsedChildren}</div>;

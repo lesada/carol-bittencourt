@@ -63,3 +63,7 @@ export const List = styled.ul`
     margin-left: 2rem;
   }
 `;
+
+export const Anchor = styled.a`
+  color: #2a89ef;
+`;
