@@ -9,12 +9,13 @@ import useIsMobile from "@/hooks/useIsMobile";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Testimonials from "./components/Testimonials";
-import { cards } from "./constants";
 
+import { useGetProjects } from "@/api/functions/projects/get-projects";
 import { Grid, Row, Section, Video } from "./styles";
 
 function Home() {
   const isMobile = useIsMobile();
+  const { data: projects } = useGetProjects();
 
   return (
     <>
@@ -26,8 +27,8 @@ function Home() {
         <Section id="projects">
           <Heading variant={isMobile ? "large" : "xx-large"}>Projetos</Heading>
           <Grid>
-            {cards.map((card) => (
-              <Card key={card.title} {...card} />
+            {projects?.map((project) => (
+              <Card key={project.id} {...project} title={project.title.pt} />
             ))}
           </Grid>
         </Section>

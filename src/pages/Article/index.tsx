@@ -1,25 +1,32 @@
+import Heading from "@/components/Heading";
+import Layout from "@/components/Layout";
+import useIsMobile from "@/hooks/useIsMobile";
 import { useParams } from "react-router-dom";
 
-import InOut from "./InOut";
-import SBC from "./SBC";
-
-import NotFound from "../NotFound";
+import { useGetProject } from "@/api/functions/projects/get-project";
+import DynamicContent from "@/components/DynamicContent";
+import { Banner } from "./styles";
 
 function Article() {
   const { id } = useParams();
+  const { data: project } = useGetProject(id!);
 
-  function getPage() {
-    switch (id) {
-      case "1":
-        return <InOut />;
-      case "2":
-        return <SBC />;
-      default:
-        return <NotFound />;
-    }
-  }
+  const isMobile = useIsMobile();
 
-  return getPage();
+  return (
+    <>
+      <Banner>{project?.image && <img src={project?.image} alt="" />}</Banner>
+
+      <Layout align="left" gap="medium">
+        <Heading variant={isMobile ? "medium" : "x-large"} align="center">
+          {project?.title.pt}
+        </Heading>
+        {project?.content.pt && (
+          <DynamicContent content={project?.content.pt} />
+        )}
+      </Layout>
+    </>
+  );
 }
 
 export default Article;
