@@ -28,8 +28,6 @@ export const Image = styled.figure<{
   $object?: "cover" | "contain";
 }>`
   width: 100%;
-
-  min-height: 21rem;
   border-radius: 0.5rem;
   overflow: hidden;
   margin: 0 auto;
@@ -39,7 +37,6 @@ export const Image = styled.figure<{
 
   img {
     width: 100%;
-    height: 100%;
     object-fit: ${({ $object = "cover" }) => $object};
   }
 `;
