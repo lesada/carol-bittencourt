@@ -33,7 +33,6 @@ export const Image = styled.figure<{
   margin: 0 auto;
 
   max-width: ${({ $full }) => ($full ? "100%" : "33.875rem;")};
-  padding-bottom: 3rem;
 
   img {
     width: 100%;

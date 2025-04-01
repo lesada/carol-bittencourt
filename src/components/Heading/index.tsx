@@ -15,11 +15,25 @@ type HeadingProps = {
   as?: THeading;
   color?: string;
   align?: "left" | "center" | "right";
+  style?: React.CSSProperties;
 };
 
-function Heading({ as = "h1", variant, children, color, align }: HeadingProps) {
+function Heading({
+  as = "h1",
+  variant,
+  children,
+  color,
+  align,
+  style,
+}: HeadingProps) {
   return (
-    <Title as={as} $variant={variant} $color={color} $align={align}>
+    <Title
+      as={as}
+      $variant={variant}
+      $color={color}
+      $align={align}
+      style={style}
+    >
       {children}
     </Title>
   );
