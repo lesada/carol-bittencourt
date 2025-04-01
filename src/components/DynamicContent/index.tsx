@@ -1,3 +1,4 @@
+import { convertCss } from "@/utils/convertCss";
 import parse, {
   DOMNode,
   domToReact,
@@ -27,30 +28,50 @@ function DynamicContent({ content }: DynamicContentProps) {
         switch (name) {
           case "h2":
             return (
-              <Heading as="h2" variant="small">
+              <Heading
+                as="h2"
+                variant="small"
+                style={convertCss(attribs.style)}
+              >
                 {parsedChildren}
               </Heading>
             );
           case "h3":
             return (
-              <Heading as="h3" variant="x-small">
+              <Heading
+                as="h3"
+                variant="x-small"
+                style={convertCss(attribs.style)}
+              >
                 {parsedChildren}
               </Heading>
             );
           case "p":
-            return <Text>{parsedChildren}</Text>;
+            return (
+              <Text style={convertCss(attribs.style)}>{parsedChildren}</Text>
+            );
           case "strong":
             return (
-              <Text $bold as="span">
+              <Text style={convertCss(attribs.style)} $bold as="span">
                 {parsedChildren}
               </Text>
             );
           case "figcaption":
-            return <Legend>{parsedChildren}</Legend>;
+            return (
+              <Legend style={convertCss(attribs.style)}>
+                {parsedChildren}
+              </Legend>
+            );
           case "blockquote":
-            return <Detach>{parsedChildren}</Detach>;
+            return (
+              <Detach style={convertCss(attribs.style)}>
+                {parsedChildren}
+              </Detach>
+            );
           case "ul":
-            return <List>{parsedChildren}</List>;
+            return (
+              <List style={convertCss(attribs.style)}>{parsedChildren}</List>
+            );
           case "li":
             return <li>{parsedChildren}</li>;
           case "br":

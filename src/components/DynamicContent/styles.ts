@@ -32,9 +32,6 @@ export const Image = styled.figure<{
   overflow: hidden;
   margin: 0 auto;
 
-  max-width: ${({ $full }) => ($full ? "100%" : "33.875rem;")};
-  padding-bottom: 3rem;
-
   img {
     width: 100%;
     object-fit: ${({ $object = "cover" }) => $object};
