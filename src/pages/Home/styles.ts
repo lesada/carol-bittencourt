@@ -35,7 +35,7 @@ export const Video = styled.video`
 
 export const Grid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20.375rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
   justify-items: center;
   gap: 1rem;
 
