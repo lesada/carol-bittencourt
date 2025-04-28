@@ -10,7 +10,6 @@ export const Pictures = styled.div`
     &:hover {
       div:first-child {
         transform: rotate(-8.234deg) translateX(-0.5rem);
-        background-color: red;
       }
 
       div:nth-child(2) {
