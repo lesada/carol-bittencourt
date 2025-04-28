@@ -1,4 +1,3 @@
-import { Icons } from "@/assets/icons";
 import BannerMobile from "@/assets/videos/banner-mobile.mp4";
 import Banner from "@/assets/videos/banner.mp4";
 import Card from "@/components/Card";
@@ -11,7 +10,8 @@ import Contact from "./components/Contact";
 import Testimonials from "./components/Testimonials";
 
 import { useGetProjects } from "@/api/functions/projects/get-projects";
-import { Grid, Row, Section, Video } from "./styles";
+import MyWork from "./components/MyWork";
+import { Grid, Section, Video } from "./styles";
 
 function Home() {
   const isMobile = useIsMobile();
@@ -33,24 +33,8 @@ function Home() {
           </Grid>
         </Section>
         <About />
-        <Section>
-          <Heading
-            as="h3"
-            variant={isMobile ? "medium" : "x-large"}
-            align={isMobile ? "center" : "left"}
-          >
-            Onde você pode ter visto meu trabalho
-          </Heading>
-          <Row>
-            <Icons.Starta />
-            <Icons.Sicredi />
-            <Icons.Impulso />
-            <Icons.Sbc />
-          </Row>
-        </Section>
-
+        <MyWork />
         <Contact />
-
         <Testimonials />
       </Layout>
     </>
